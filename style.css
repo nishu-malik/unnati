@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+.container .card {
+  height: 510px;
+  width: 800px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.container .card .form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container .card .left-side {
+  width: 40%;
+  background-color: #e7f6fa;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.container .card .left-side::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container .card .left-side {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.d-none {
+  display: none !important;
+}
+
+.main {
+  padding: 10px 30px;
+  display: none;
+}
+
+.active {
+  display: block !important;
+}
+
+.top-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.logo img {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.steps .step .circle {
+  height: 40px;
+  width: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.steps .step .line {
+  width: 22%;
+}
+
+.top-div h2 {
+  color: #484a4c;
+}
+
+.top-div p {
+  color: #585e61;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input-text {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+input {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+input[type="text"] {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  border-bottom: 1px solid #d4dfe4;
+  font-size: 12px;
+}
+
+input[type="password"] {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  border-bottom: 1px solid #d4dfe4;
+  font-size: 12px;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.radio > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+label {
+  font-size: 12px;
+}
+[type="file"] {
+  position: absolute;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+[type="file"] + label {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: left;
+  padding: 10px;
+  width: 150px;
+  margin: 0;
+  left: 0;
+  position: relative;
+  font-size: 12px;
+}
+[type="file"] + label {
+  text-align: center;
+
+  top: 0.5em;
+  /* Decorative */
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+[type="file"] + label:hover {
+  background: #14c6ee;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.final_button {
+  margin-top: 130px;
+}
+
+.buttons button {
+  height: 35px;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  background-color: #14c6ee;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.warning {
+  border-bottom: 1px solid red !important;
+}
+
+.check_box {
+  text-align: center;
+}
+
+.check_box p {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
+
+.container .card .right-side {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.right-side .cover-image {
+  height: 100%;
+  position: relative;
+}
+
+.right-side img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.steps {
+  width: 100%;
+  counter-reset: css-counter 0;
+  padding: 4px;
+}
+
+.steps li {
+  list-style: none;
+  width: 25%;
+  float: left;
+  position: relative;
+  text-align: center;
+  counter-increment: css-counter 1;
+}
+
+.steps li:before {
+  content: counter(css-counter);
+  height: 30px;
+  width: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  color: #fff;
+  line-height: 30px;
+}
+
+.steps li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: blue;
+  top: 15px;
+  z-index: -1;
+}
+
+li:first-child::after {
+  display: none;
+}
+
+li.li-active::before {
+  background-color: green;
+}
+
+@media (max-width: 750px) {
+  .container .card {
+    max-width: 550px;
+  }
+
+  .container .card .right-side {
+    width: 40%;
+    object-fit: cover;
+  }
+
+  .container .card .left-side {
+    width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  .container .card {
+    max-width: 350px;
+  }
+
+  .container .card .right-side {
+    display: none;
+  }
+
+  .container .card .left-side {
+    width: 100%;
+  }
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Unnati</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="form">
+          <div class="left-side">
+            <div class="signup-form s_form">
+              <div class="logo">
+                <img src="https://aitecell.in/assets/img/logo.png" alt="logo" />
+              </div>
+              <ul class="steps">
+                <li class="li-active"></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <div class="main active">
+                <div class="top-div">
+                  <p>Basic Details</p>
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="Team Leader's name"
+                    id="teamLeader"
+                    require
+                  />
+                </div>
+
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="Contact No"
+                    class="phone"
+                    id="teamLeaderPhone"
+                    require
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    class="email"
+                    id="teamLeaderEmail"
+                    require
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="Registration No"
+                    id="teamLeaderReg"
+                    require
+                  />
+                </div>
+                <div class="buttons">
+                  <button class="next_button">Next</button>
+                </div>
+              </div>
+              <div class="main">
+                <div class="top-div">
+                  <p>Team member details</p>
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="2nd Team Member name "
+                    require
+                    id="teamMem2-name"
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="2nd member Registration no"
+                    require
+                    id="teamMem2-reg"
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="3rd  Member name "
+                    id="teamMem3-name"
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="3rd memberRegistration No"
+                    id="teamMem3-reg"
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="4th  Member name "
+                    id="teamMem4-name"
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="4th memberRegistration No"
+                    id="teamMem4-reg"
+                  />
+                </div>
+                <div class="buttons">
+                  <button class="previous_button">Previous</button>
+                  <button class="next_button">Next</button>
+                </div>
+              </div>
+              <div class="main">
+                <div class="top-div">
+                  <p>One last step</p>
+                </div>
+                <div class="input-text">
+                  <input
+                    type="text"
+                    placeholder="Team Name (be creative as you can 🤔)."
+                    require
+                    id="team_name"
+                  />
+                </div>
+                <div class="input-text">
+                  <input
+                    type="file"
+                    for="logo"
+                    placeholder="Give a logo to your idea"
+                    id="teamLogo"
+                  />
+                  <label for="logo">Give a logo to your idea</label>
+                </div>
+                <label for="radio">Have at least one girl member ?</label>
+
+                <div class="input-text radio">
+                  <div>
+                    <input
+                      for="radio"
+                      type="radio"
+                      name="girl member"
+                      require
+                      id="girl_yes"
+                    />
+                    <label for="girl_yes">Yes, 👧</label>
+                  </div>
+                  <div>
+                    <input
+                      for="radio"
+                      id="girl_no"
+                      type="radio"
+                      name="girl member"
+                      require
+                    />
+                    <label for="girl_no">No, 😟</label>
+                  </div>
+                </div>
+
+                <div class="buttons final_button">
+                  <button class="previous_button">Previous</button>
+                  <button class="submit_button" type="submit">Submit</button>
+                </div>
+              </div>
+
+              <div class="main">
+                <div class="top-div">
+                  <h2>Welcome 🙏</h2>
+                  <p>Hope you have nice day</p>
+                </div>
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+                <div class="check_box">
+                  <p>
+                    Congratulations team <span id="shown_name"></span> you have
+                    successfully registered for Unnati.
+                  </p>
+                  <p>See you in event.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="cover-image">
+              <img
+                class="right_img"
+                src="https://aitecell.in/assets/img/newletter_image.png"
+              />
+              <img
+                class="right_img d-none"
+                src="https://imgur.com/jUSvhqu.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    import {
+      getFirestore,
+      doc,
+      getDoc,
+      setDoc,
+      collection,
+      addDoc,
+      updateDoc,
+      deleteDoc,
+      deleteField,
+    } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js";
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyC4PS-AMofEKj-ro2E3hMNAYzd86udotSk",
+      authDomain: "trans-aurora-326505.firebaseapp.com",
+
+      projectId: "trans-aurora-326505",
+      storageBucket: "trans-aurora-326505.appspot.com",
+      messagingSenderId: "92255237524",
+      appId: "1:92255237524:web:c83e63061974e20cf98b81",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore();
+    var ref = collection(db, "participants");
+    var nxt_btn = document.querySelectorAll(".next_button");
+    var prev_btn = document.querySelectorAll(".previous_button");
+    var submit_btn = document.querySelectorAll(".submit_button");
+    var main_form = document.querySelectorAll(".main");
+    var progressBar = document.querySelectorAll(".steps li");
+    var steps = document.querySelector(".steps");
+    var teamLeader = document.getElementById("teamLeader");
+    var teamLeaderEmail = document.getElementById("teamLeaderEmail");
+    var teamLeaderPhone = document.getElementById("teamLeaderPhone");
+    var teamLeaderReg = document.getElementById("teamLeaderReg");
+    var teamMem2_name = document.getElementById("teamMem2-name");
+    var teamMem2_reg = document.getElementById("teamMem2-reg");
+    var teamMem3_reg = document.getElementById("teamMem3-reg");
+    var teamMem3_name = document.getElementById("teamMem3-name");
+    var teamMem4_reg = document.getElementById("teamMem4-reg");
+    var teamMem4_name = document.getElementById("teamMem4-name");
+    var teamLogo = document.getElementById("teamLogo");
+    var girl_yes = document.getElementById("girl_yes");
+    var girl_no = document.getElementById("girl_no");
+    var girl_present = "yes";
+    if (girl_yes.checked == true) {
+      girl_present = "yes";
+    }
+    if (girl_no.checked == true) {
+      girl_present = "no";
+    }
+    let formNumber = 0;
+    nxt_btn.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (!validateform()) {
+          return false;
+        }
+        formNumber++;
+        progress("color");
+        update_form();
+      });
+    });
+
+    prev_btn.forEach(function (prev_button) {
+      prev_button.addEventListener("click", function () {
+        formNumber--;
+        progress("nocolor");
+        update_form();
+      });
+    });
+
+    function progress(state) {
+      if (state == "color") {
+        progressBar[formNumber].classList.add("li-active");
+      } else {
+        progressBar[formNumber + 1].classList.remove("li-active");
+      }
+    }
+
+    function update_form() {
+      main_form.forEach(function (main) {
+        main.classList.remove("active");
+      });
+      main_form[formNumber].classList.add("active");
+    }
+
+    function validateform() {
+      var validate = true;
+      var validate_inputs = document.querySelectorAll(".main.active input");
+      validate_inputs.forEach(function (input_valid) {
+        input_valid.classList.remove("warning");
+        if (input_valid.hasAttribute("require")) {
+          if (input_valid.value.length == 0) {
+            validate = false;
+            input_valid.classList.add("warning");
+          }
+        }
+        if (input_valid.classList.contains("email")) {
+          if (
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+              input_valid.value
+            )
+          ) {
+            validate = validate;
+          } else {
+            validate = false;
+            input_valid.classList.add("warning");
+            input_valid.placeholder = "Enter the correct email address";
+          }
+        }
+        if (input_valid.classList.contains("phone")) {
+          var phoneNo = /^\d{10}$/;
+          if (!input_valid.value.match(phoneNo)) {
+            validate = false;
+            input_valid.classList.add("warning");
+            input_valid.placeholder = "Enter the correct contact number";
+          }
+        }
+      });
+      return validate;
+    }
+    submit_btn.forEach(function (submit_button) {
+      submit_button.addEventListener("click", function () {
+        if (!validateform()) {
+          return false;
+        }
+        var team_name = document.querySelector("#team_name");
+        var shown_name = document.querySelector("#shown_name");
+        shown_name.innerHTML = team_name.value;
+        formNumber++;
+        update_form();
+        steps.classList.add("d-none");
+        const docRef = addDoc(ref, {
+          team_name: team_name.value,
+          teamLeader: teamLeader.value,
+          teamLeaderEmail: teamLeaderEmail.value,
+          teamLeaderReg: teamLeaderReg.value,
+          teamLeaderPhone: teamLeaderPhone.value,
+          teamMem2_name: teamMem2_name.value,
+          teamMem2_reg: teamMem2_reg.value,
+          teamMem3_reg: teamMem3_reg.value,
+          teamMem3_name: teamMem3_name.value,
+          teamMem4_reg: teamMem4_reg.value,
+          teamMem4_name: teamMem4_name.value,
+          teamLogo: teamLogo.value,
+          girl_present: girl_present,
+        })
+          .then(() => {
+            console.log("success");
+          })
+          .catch((error) => {
+            console.log("error", error);
+          });
+      });
+    });
+  </script>
+</html>
